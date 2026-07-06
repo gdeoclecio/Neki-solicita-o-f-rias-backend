@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Como Executar o Projeto
 
-## Getting Started
+## Pré-requisitos
 
-First, run the development server:
+Antes de executar o projeto, é necessário ter instalado:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
+- Node.js (versão 24 ou superior)
+- Git
+- pnpm
+
+Caso o *pnpm* ainda não esteja instalado, execute:
+
+bash
+npm install -g pnpm
+
+
+---
+
+# Primeira execução
+
+Após clonar o repositório ou realizar um git pull, siga os passos abaixo.
+
+## 1. Acesse a pasta do projeto
+
+bash
+cd neki-solicitacao-ferias-web
+
+
+## 2. Troque para a branch de desenvolvimento
+
+bash
+git checkout develop
+
+
+## 3. Atualize a branch
+
+bash
+git pull origin develop
+
+
+## 4. Instale as dependências
+
+bash
+pnpm install
+
+
+Esse comando instalará todas as dependências do projeto descritas no package.json.
+
+## 5. Executar a aplicação
+
+bash
 pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+A aplicação ficará disponível em:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+http://localhost:3000
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Executar os testes
 
-## Deploy on Vercel
+Para executar todos os testes do projeto:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+bash
+pnpm test
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+---
+
+# Sempre que atualizar o projeto
+
+Sempre que houver novas alterações na branch develop, execute:
+
+bash
+git pull origin develop
+
+
+Caso tenham sido adicionadas novas dependências ao projeto, execute novamente:
+
+bash
+pnpm install
